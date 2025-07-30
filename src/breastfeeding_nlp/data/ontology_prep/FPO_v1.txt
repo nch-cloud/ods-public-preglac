@@ -1,0 +1,263 @@
+format-version: 0.1
+data-version: 2025-04-22
+ontology: fpo.obo
+
+[Term]
+id: FPO:0000001
+name: Feeding practice
+def: "A root concept for all infant feeding-related behaviors, substances, and practices." [FPO:curator]
+
+[Term]
+id: FPO:0000002
+name: Breastfeeding
+def: "Feeding an infant directly at the breast or providing human breast milk in any form." [FPO:curator]
+comment: "High relevance for identifying breast milk feeding practices."
+synonym: "Breast feeding" EXACT []
+synonym: "Breastfed" EXACT []
+synonym: "Breast feedings" EXACT []
+synonym: "Breastfeedings" EXACT []
+synonym: "Breast fed" EXACT []
+synonym: "BF" EXACT []
+synonym: "Nursing" EXACT []
+is_a: FPO:0000001 ! Feeding practice
+
+[Term]
+id: FPO:0000003
+name: Exclusive Breastfeeding
+def: "Feeding an infant solely with breast milk (direct or expressed), excluding formula and other supplements (aside from vitamins or medications)." [FPO:curator]
+comment: "Example usage: 'Infant is exclusively breastfed for the first 6 months.' Relevance: High."
+synonym: "Breastfeeding, Exclusive" EXACT []
+synonym: "Exclusive Breast Feeding" EXACT []
+synonym: "Breast Feeding, Exclusive" EXACT []
+synonym: "EBF" EXACT []
+is_a: FPO:0000002 ! Breastfeeding
+
+[Term]
+id: FPO:0000004
+name: Chestfeeding
+def: "Feeding an infant from the chest by individuals who may prefer a more gender-inclusive term than 'breastfeeding'." [FPO:curator]
+comment: "Example usage: 'He is chestfeeding his newborn.' Relevance: High."
+synonym: "Chestfeedings" EXACT []
+is_a: FPO:0000002 ! Breastfeeding
+
+[Term]
+id: FPO:0000005
+name: Milk Sharing
+def: "The practice of obtaining and feeding expressed breast milk from a donor rather than the infant's own lactating parent." [FPO:curator]
+comment: "Example usage: 'Mother opted for milk sharing with a community donor.' Relevance: Medium."
+synonym: "Sharing, Milk" EXACT []
+is_a: FPO:0000002 ! Breastfeeding
+
+[Term]
+id: FPO:0000006
+name: Breastmilk
+def: "Human milk produced by lactating individuals, regardless of delivery method (direct breast, bottle, tube)." [FPO:curator]
+comment: "Example usage: 'Infant receives expressed breastmilk in a bottle.' Relevance: High."
+synonym: "Breast Milk" EXACT []
+synonym: "EBM" EXACT []
+synonym: "Expressed Breastmilk" EXACT []
+is_a: FPO:0000002 ! Breastfeeding
+
+[Term]
+id: FPO:0000007
+name: Breastmilk Expression
+def: "The act of extracting milk from the breast manually or via a pump." [FPO:curator]
+comment: "Example usage: 'She performs breastmilk expression several times a day.' Relevance: Medium."
+synonym: "Breast Milk Expressions" EXACT []
+synonym: "Expression, Breast Milk" EXACT []
+synonym: "Milk Expression, Breast" EXACT []
+is_a: FPO:0000002 ! Breastfeeding
+
+[Term]
+id: FPO:0000008
+name: Formula Feeding
+def: "Feeding an infant with commercially prepared formula, either exclusively or as a supplement to breast milk." [FPO:curator]
+comment: "High relevance for identifying formula as a primary or partial feeding source."
+synonym: "Infant formula feeding" EXACT []
+is_a: FPO:0000001 ! Feeding practice
+
+[Term]
+id: FPO:0000009
+name: Infant Formula
+def: "A manufactured food designed and marketed for feeding to babies and infants, typically prepared for bottle-feeding." [FPO:curator]
+comment: "Example usage: 'Patient is on infant formula for supplemental feedings.' Relevance: High."
+synonym: "Formula, Infant" EXACT []
+synonym: "Formulas, Infant" EXACT []
+synonym: "Baby Formula" EXACT []
+synonym: "Baby Formulas" EXACT []
+synonym: "Formula, Baby" EXACT []
+synonym: "Formulas, Baby" EXACT []
+synonym: "Formula" EXACT []
+is_a: FPO:0000008 ! Formula Feeding
+
+[Term]
+id: FPO:0000010
+name: Similac
+def: "A brand of infant formula commonly used as a sole or supplemental nutrition source." [FPO:curator]
+comment: "Example usage: 'Similac was used exclusively during the first week.' Relevance: High."
+synonym: "sim advance" EXACT []
+is_a: FPO:0000009 ! Infant Formula
+
+[Term]
+id: FPO:0000011
+name: Enfamil
+def: "A well-known brand of infant formula available in multiple varieties for diverse infant needs." [FPO:curator]
+comment: "Example usage: 'Switched from Enfamil to a specialty formula due to intolerance.' Relevance: High."
+is_a: FPO:0000009 ! Infant Formula
+
+[Term]
+id: FPO:0000012
+name: Gerber
+def: "A brand offering infant formulas and baby food products." [FPO:curator]
+comment: "Example usage: 'Gerber formula was introduced at two months.' Relevance: Medium."
+is_a: FPO:0000009 ! Infant Formula
+
+[Term]
+id: FPO:0000013
+name: Earth's Best
+def: "An organic brand of infant formula marketed for its purportedly natural ingredients." [FPO:curator]
+comment: "Example usage: 'Mother prefers Earth’s Best for organic certification.' Relevance: Medium."
+is_a: FPO:0000009 ! Infant Formula
+
+[Term]
+id: FPO:0000014
+name: NeoSure
+def: "A specialized infant formula designed for preterm or low-birth-weight infants, offering additional calories and nutrients." [FPO:curator]
+comment: "Example usage: 'NeoSure recommended for infant born preterm.' Relevance: High."
+is_a: FPO:0000009 ! Infant Formula
+
+[Term]
+id: FPO:0000015
+name: EnfaCare
+def: "A specialized Enfamil brand formula formulated for premature infants." [FPO:curator]
+comment: "Example usage: 'EnfaCare provided in NICU due to prematurity.' Relevance: High."
+is_a: FPO:0000009 ! Infant Formula
+
+[Term]
+id: FPO:0000016
+name: Ambiguous
+def: "Terms or references that may suggest feeding but do not definitively confirm breast or formula feeding." [FPO:curator]
+comment: "By themselves, these terms do not establish a specific feeding type."
+is_a: FPO:0000001 ! Feeding practice
+
+[Term]
+id: FPO:0000017
+name: Bottlefeeding
+def: "Providing milk via a bottle, which could contain either breast milk or formula." [FPO:curator]
+comment: "Example usage: 'Baby was bottlefed overnight.' Relevance: Medium."
+synonym: "Bottlefed" EXACT []
+is_a: FPO:0000016 ! Ambiguous
+
+[Term]
+id: FPO:0000018
+name: Breast Milk Collection
+def: "Collecting breast milk, typically for storage or later use, without explicit indication of how or if it is ultimately fed." [FPO:curator]
+comment: "Example usage: 'Breast milk collection bags are in the fridge.' Relevance: Medium."
+synonym: "Breastmilk Collection" EXACT []
+synonym: "Milk Collection, Breast" EXACT []
+is_a: FPO:0000016 ! Ambiguous
+
+[Term]
+id: FPO:0000019
+name: Breast Pumping
+def: "Using a breast pump to express milk; does not inherently specify final feeding method or exclusive practice." [FPO:curator]
+comment: "Example usage: 'She does breast pumping but also supplements with formula.' Relevance: Medium."
+synonym: "Pumpings" EXACT []
+synonym: "Pumping" EXACT []
+synonym: "Pump" EXACT []
+is_a: FPO:0000016 ! Ambiguous
+
+[Term]
+id: FPO:0000020
+name: Human milk fortifier
+def: "An additive mixed into breast milk (often for preterm infants) that can mimic or supplement formula-like components." [FPO:curator]
+comment: "Example usage: 'Human milk fortifier was added to expressed breast milk.' Relevance: Medium."
+is_a: FPO:0000016 ! Ambiguous
+
+[Term]
+id: FPO:0000021
+name: Feeding-Related
+def: "Terms pertaining to feeding techniques, complications, or anatomical issues without specifying breast vs. formula." [FPO:curator]
+comment: "Alone, these do not determine whether the infant is breastfed or formula-fed."
+is_a: FPO:0000001 ! Feeding practice
+
+[Term]
+id: FPO:0000022
+name: Tender Nipples
+def: "Discomfort or soreness of the nipples, commonly noted during or after feeding." [FPO:curator]
+comment: "Example usage: 'Patient reports tender nipples after feeds.' Relevance: Low."
+is_a: FPO:0000021 ! Feeding-Related
+
+[Term]
+id: FPO:0000023
+name: Cracked Nipples
+def: "Fissures or cracking in the nipple area, often attributed to feeding-related friction or latch issues." [FPO:curator]
+comment: "Example usage: 'Cracked nipples observed on exam, recommended lanolin.' Relevance: Low."
+is_a: FPO:0000021 ! Feeding-Related
+
+[Term]
+id: FPO:0000024
+name: Lanolin
+def: "A topical agent frequently used to soothe nipple pain or cracking, often in the context of breastfeeding but not exclusively." [FPO:curator]
+comment: "Example usage: 'Applying lanolin to reduce nipple soreness.' Relevance: Low."
+is_a: FPO:0000021 ! Feeding-Related
+
+[Term]
+id: FPO:0000025
+name: Hand Expression
+def: "Manually expressing milk from the breast by hand, often taught in postpartum education." [FPO:curator]
+comment: "Example usage: 'Hand expression introduced before using a breast pump.' Relevance: Low."
+is_a: FPO:0000021 ! Feeding-Related
+
+[Term]
+id: FPO:0000026
+name: Football Position
+def: "A hold technique where the infant is tucked under the arm like a football, often used during breastfeeding to facilitate a good latch." [FPO:curator]
+comment: "Example usage: 'Instructed mother on the football hold to improve latch.' Relevance: Low."
+synonym: "Football Hold" EXACT []
+is_a: FPO:0000021 ! Feeding-Related
+
+[Term]
+id: FPO:0000027
+name: Feeding Difficulties
+def: "General issues with feeding that can apply to either breast or formula feeding." [FPO:curator]
+comment: "Example usage: 'Infant has feeding difficulties secondary to cleft palate.' Relevance: Low."
+is_a: FPO:0000021 ! Feeding-Related
+
+[Term]
+id: FPO:0000028
+name: Poor Weight Gain
+def: "Insufficient infant growth potentially due to inadequate intake of breast milk, formula, or both." [FPO:curator]
+comment: "Example usage: 'Evaluating cause of poor weight gain after hospital discharge.' Relevance: Low."
+is_a: FPO:0000021 ! Feeding-Related
+
+[Term]
+id: FPO:0000029
+name: NG Tube
+def: "A nasogastric tube used for enteral feeding, which may provide either expressed breast milk or formula directly to the stomach." [FPO:curator]
+comment: "Example usage: 'NG tube placed for supplementary feeding.' Relevance: Low."
+synonym: "Nasogastric" EXACT []
+is_a: FPO:0000021 ! Feeding-Related
+
+[Term]
+id: FPO:0000030
+name: Gavage
+def: "Tube feeding technique that delivers nutrition (breast milk or formula) directly into the stomach; also referred to as PO/Gavage or Per os." [FPO:curator]
+comment: "Example usage: 'Gavage feeding established post-op.' Relevance: Low."
+synonym: "PO/Gavage" EXACT []
+synonym: "Per os" EXACT []
+is_a: FPO:0000021 ! Feeding-Related
+
+[Term]
+id: FPO:0000031
+name: Latch Difficulties
+def: "Problems with an infant's ability to latch onto the breast, potentially prompting formula supplementation if not resolved." [FPO:curator]
+comment: "Example usage: 'Mother reports latch difficulties leading to partial formula use.' Relevance: Low."
+is_a: FPO:0000021 ! Feeding-Related
+
+[Term]
+id: FPO:9999999
+name: Classification Rules (informative)
+def: "High-level guidelines for labeling clinical text based on the presence or absence of terms in this ontology." [FPO:curator]
+comment: "1) Exclusive Breastfeeding if note contains at least one Breastfeeding term but no Formula Feeding terms.\n2) Exclusive Formula Feeding if note contains at least one Formula Feeding term but no Breastfeeding terms.\n3) Mixed Feeding if note contains both Breastfeeding and Formula Feeding terms.\n4) None if no Breastfeeding or Formula Feeding terms appear.\n5) Ambiguous terms alone default to None unless context clarifies feeding type.\n6) Feeding-Related terms alone do not establish exclusive or mixed feeding; they must co-occur with Breastfeeding or Formula Feeding terms."
+is_a: FPO:0000001 ! Feeding practice

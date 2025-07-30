@@ -1,0 +1,400 @@
+format-version: 2.0
+data-version: 2025-05-19
+ontology: fpo.obo
+
+######################################
+# ROOT NODES
+######################################
+
+[Term]
+id: FPO:0000001
+name: feeding practice
+def: "A root concept for all infant feeding-related behaviors, substances, and practices." [FPO:curator]
+
+[Term]
+id: FPO:0000002
+name: feeding route
+def: "An aspect of infant feeding that specifies the pathway by which nutrition is delivered (e.g., at the breast, via bottle, via tube)." [FPO:curator]
+is_a: FPO:0000001 ! Feeding practice
+
+[Term]
+id: FPO:0000003
+name: feeding type
+def: "An aspect of infant feeding that specifies the substance or combination of substances being fed (e.g., human milk, infant formula)." [FPO:curator]
+is_a: FPO:0000001 ! Feeding practice
+
+[Term]
+id: FPO:0000004
+name: feeding Related
+def: "An indirect aspect of infant feeding that may suggest problematic or alternative feeding behavior and earlier or more frequent state transitions in both feeding routes and feeding types." [FPO:curator]
+is_a: FPO:0000001 ! Feeding practice
+
+
+######################################
+# FEEDING ROUTES
+######################################
+
+[Term]
+id: FPO:0000005
+name: NPO
+def: "Not by mouth" [FPO:curator]
+is_a: FPO:0000002 ! Feeding route
+
+[Term]
+id: FPO:0000006
+name: feeding tube
+def: "A medical device inserted into the gastrointestinal tract to deliver nutrition when oral feeding is not possible." [FPO:curator]
+comment: "NG tube is redundant with G tube – removing."
+comment: "Gavage and bolus could be split into their own terms.
+synonym: "nasogastric" EXACT []
+synonym: "G tube" EXACT []
+synonym: "bolus" EXACT []
+synonym: "gavage" EXACT []
+is_a: FPO:0000005 ! NPO
+
+[Term]
+id: FPO:0000007
+name: PO
+def: "By mouth" [FPO:curator]
+synonym: "per os" EXACT []
+synonym: "p/o" EXACT []
+synonym: "po" EXACT []
+# TODO: Add more synonyms here. Look at the regex from medspacy
+is_a: FPO:0000002 ! Feeding route
+
+[Term]
+id: FPO:0000040
+name: direct breastfeeding
+def: "Feeding an infant directly at the breast." [FPO:curator]
+comment: assigned to FPO:0000040 so that it comes after 'human breast milk' and the rollup function works correctly.
+synonym: "Breastfed" EXACT []
+synonym: "Breastfeeding" EXACT []
+synonym: "Breastfeedings" EXACT []
+synonym: "Breast fed" EXACT []
+synonym: "Breast feed" EXACT []
+synonym: "Breast feeds" EXACT []
+synonym: "Breast feeding" EXACT []
+synonym: "Breast feedings" EXACT []
+synonym: "Breast-fed" EXACT []
+synonym: "Breast-feed" EXACT []
+synonym: "Breast-feeds" EXACT []
+synonym: "Breast-feeding" EXACT []
+synonym: "Breast-feedings" EXACT []
+synonym: "at-breast feeding" EXACT []
+synonym: "at-breast feedings" EXACT []
+synonym: "BF" EXACT []
+# gender neutral terms
+synonym: "Chestfed" EXACT []
+synonym: "Chestfeeding" EXACT []
+synonym: "Chestfeedings" EXACT []
+synonym: "Chest fed" EXACT []
+synonym: "Chest feeding" EXACT []
+synonym: "Chest feedings" EXACT []
+# Consider adding 'breast' and letting the relationship between breast and bottle/formula capture This
+synonym: "breast and bottle" EXACT []
+synonym: "breast and formula" EXACT []
+is_a: FPO:0000007 ! PO
+is_a: FPO:0000010 ! human breast milk
+
+[Term]
+id: FPO:0000009
+name: Bottlefeeding
+def: "Providing milk via a bottle; the bottle may contain either human milk or infant formula." [FPO:curator]
+comment: "Example usage: Baby was bottlefed overnight."
+synonym: "Bottlefed" EXACT []
+synonym: "Bottle fed" EXACT []
+synonym: "Bottle feeding" EXACT []
+synonym: "Bottle feedings" EXACT []
+synonym: "Bottle" EXACT []
+is_a: FPO:0000007 ! PO
+
+######################################
+# FEEDING TYPES
+######################################
+
+[Term]
+id: FPO:0000010
+name: human breast milk
+def: "Milk produced by a lactating human for the purpose of feeding an infant." [FPO:curator]
+# mom milk?
+# mom's milk?
+synonym: "human milk" EXACT []
+synonym: "human breastmilk" EXACT []
+synonym: "breastmilk" EXACT []
+synonym: "breast milk" EXACT []
+is_a: FPO:0000003 ! Feeding type
+
+# [Term] --> "not expressed". This is just direct breastfeeding, which is already encapsulated in FPO:0000040
+
+[Term]
+id: FPO:0000011
+name: expressed breast milk
+comment: assumes birth mom's breast milk
+def: "Feeding a child expressed human breast milk." [FPO:curator]
+comment: "EBM can be fed via bottle"
+synonym: "EBM" EXACT []
+synonym: "breast milk" EXACT []
+synonym: "breastmilk" EXACT []
+synonym: "expressed breastmilk" EXACT []
+synonym: "breastmilk expression" EXACT []
+synonym: "breastmilk expressions" EXACT []
+synonym: "breast milk expression" EXACT []
+synonym: "breast milk expressions" EXACT []
+synonym: "milk expressions" EXACT []
+synonym: "hand expression" EXACT []
+is_a: FPO:0000010 ! human breast milk
+
+
+[Term]
+id: FPO:0000012
+name: donor milk
+def: "" [FPO:curator]
+synonym: "milk bank" EXACT []
+synonym: "milk banking" EXACT []
+synonym: "milk sharing" EXACT []
+synonym: "donor milk" EXACT []
+synonym: "donor" EXACT []
+is_a: FPO:0000011 ! expressed breast milk
+
+[Term]
+id: FPO:0000013
+name: Breast pumping
+def: "Collecting breast milk, typically for storage or later use, without explicit indication of how or if it is ultimately fed." [FPO:curator]
+comment: "Example usage: 'Breast milk collection bags are in the fridge.'"
+synonym: "Breastmilk Collection" EXACT []
+synonym: "Breast milk Collection" EXACT []
+synonym: "Milk Collection, Breast" EXACT []
+synonym: "Breast pump" EXACT []
+synonym: "pump and dump" EXACT []
+synonym: "pumped and dumped" EXACT []
+synonym: "pumped" EXACT []
+synonym: "pumping" EXACT []
+synonym: "pumps" EXACT []
+is_a: FPO:0000011 ! expressed breast milk
+
+[Term]
+id: FPO:0000014
+name: Fortified breast milk
+def: "Human milk to which a commercial human milk fortifier or infant formula has been added to increase caloric density or micronutrient content." [FPO:curator]
+comment: "Classified under both Human milk and Infant formula."
+synonym: "Human milk fortifier" RELATED []
+synonym: "Fortified human milk" EXACT []
+synonym: "HMF" EXACT []
+synonym: "fortified with" EXACT []
+synonym: "fortified breastmilk" EXACT []
+synonym: "fortified breast milk" EXACT []
+synonym: "fortified bm" EXACT []
+synonym: "bm fortified" EXACT []
+is_a: FPO:0000010 ! human breast milk
+is_a: FPO:0000015 ! formula
+
+[Term]
+id: FPO:0000015
+name: formula
+def: "Feeding an infant with commercially prepared formula, either exclusively or as a supplement to breast milk." [FPO:curator]
+comment: "High relevance for identifying formula as a primary or partial feeding source."
+synonym: "formula feeding" EXACT []
+synonym: "Formula, Infant" EXACT []
+synonym: "Formulas, Infant" EXACT []
+synonym: "Baby Formula" EXACT []
+synonym: "Baby Formulas" EXACT []
+synonym: "Formula, Baby" EXACT []
+synonym: "Formulas, Baby" EXACT []
+is_a: FPO:0000003 ! Feeding type
+
+[Term]
+id: FPO:0000016
+name: Similac
+def: "A brand of infant formula commonly used as a sole or supplemental nutrition source." [FPO:curator]
+comment: "Example usage: ‘Similac was used exclusively during the first week.’"
+synonym: "sim" EXACT []
+synonym: "similac advance" EXACT []
+synonym: "sim advance" EXACT []
+synonym: "similac sensitive" EXACT []
+synonym: "sim sensitive" EXACT []
+is_a: FPO:0000015 ! formula
+
+[Term]
+id: FPO:0000017
+name: Enfamil
+def: "A well‑known brand of infant formula available in multiple varieties for diverse infant needs." [FPO:curator]
+comment: "Example usage: ‘Switched from Enfamil to a specialty formula due to intolerance.’"
+is_a: FPO:0000015 ! formula
+
+[Term]
+id: FPO:0000018
+name: Gerber
+def: "A brand offering infant formulas and baby food products." [FPO:curator]
+comment: "Example usage: ‘Gerber formula was introduced at two months.’"
+is_a: FPO:0000015 ! formula
+
+[Term]
+id: FPO:0000019
+name: Earth’s Best
+def: "An organic brand of infant formula marketed for its purportedly natural ingredients." [FPO:curator]
+comment: "Example usage: ‘Mother prefers Earth’s Best for organic certification.’"
+is_a: FPO:0000015 ! formula
+
+[Term]
+id: FPO:0000020
+name: NeoSure
+def: "A specialized infant formula designed for preterm or low‑birth‑weight infants, offering additional calories and nutrients." [FPO:curator]
+comment: "Example usage: ‘NeoSure recommended for infant born preterm.’"
+is_a: FPO:0000015 ! formula
+
+[Term]
+id: FPO:0000021
+name: EnfaCare
+def: "A specialized Enfamil brand formula formulated for premature infants." [FPO:curator]
+comment: "Example usage: ‘EnfaCare provided in NICU due to prematurity.’"
+is_a: FPO:0000015 ! formula
+
+[Term]
+id: FPO:0000022
+name: EleCare
+def: "A specialized formula formulated for premature infants." [FPO:curator]
+comment: "Example usage: ‘hbm fortified with EleCare.’"
+synonym: "ElaCare" EXACT []
+is_a: FPO:0000015 ! formula
+
+[Term]
+id: FPO:0000023
+name: isomil
+def: "A brand of soy-based infant formula." [FPO:curator]
+is_a: FPO:0000015 ! formula
+
+[Term]
+id: FPO:0000024
+name: alimentum
+def: "A hypoallergenic infant formula designed for infants with cow’s milk allergy." [FPO:curator]
+synonym: "allimentum" EXACT []
+is_a: FPO:0000015 ! formula
+
+
+######################################
+# FEEDING RELATED
+######################################
+
+[Term]
+id: FPO:0000025
+name: latching difficulties
+def: "Challenges or discomfort experienced by the infant or parent during the process of latching onto the breast for feeding." [FPO:curator]
+comment: "separate nipple discomfort into a child of latching difficulties?"
+synonym: "difficulty latching" EXACT []
+synonym: "tender nipples" EXACT []
+synonym: "cracked nipples" EXACT []
+synonym: "lanolin" EXACT []
+is_a: FPO:0000004 ! feeding Related
+
+[Term]
+id: FPO:0000026
+name: holding positions
+def: "Various physical positions or techniques used to hold the infant during breastfeeding or bottle feeding." [FPO:curator]
+synonym: "football hold" EXACT []
+synonym: "football position" EXACT []
+is_a: FPO:0000004 ! feeding Related
+
+[Term]
+id: FPO:0000027
+name: feeding difficulties
+def: "Any issue that impairs the infant’s ability to feed effectively, including poor suck, fatigue during feeds, or disorganized feeding patterns." [FPO:curator]
+synonym: "poor weight gain" EXACT []
+is_a: FPO:0000004 ! feeding Related
+
+[Term]
+id: FPO:0000028
+name: lactation consultation
+def: "Support provided by a lactation consultant or other trained professional to address feeding challenges and optimize breastfeeding outcomes." [FPO:curator]
+synonym: "lactation consult" EXACT []
+synonym: "lactation" EXACT []
+synonym: "nnbf" EXACT []
+# is_a: FPO:0000004 ! feeding Related
+is_a: FPO:0000010 ! human breast milk
+
+[Term]
+id: FPO:0000029
+name: feeding intolerance
+def: "An adverse reaction to a feeding method or substance, often resulting in vomiting, diarrhea, or discomfort." [FPO:curator]
+is_a: FPO:0000004 ! feeding related
+
+[Term]
+id: FPO:0000030
+name: failure to thrive
+def: "A clinical condition characterized by inadequate weight gain or growth in infants and young children, often due to feeding issues or underlying medical problems." [FPO:curator]
+is_a: FPO:0000004 ! feeding related
+
+######################################
+# SHARED ANCESTRY ACROSS ROOTS
+######################################
+
+[Term]
+id: FPO:0000031
+name: formula via feeding tube
+def: "A feeding type and route combining formula with delivery via a feeding tube." [FPO:curator]
+synonym: "tube formula feeding" EXACT []
+synonym: "formula tube feeding" EXACT []
+is_a: FPO:0000015 ! formula
+is_a: FPO:0000006 ! feeding tube
+
+[Term]
+id: FPO:0000032
+name: fortified breast milk via feeding tube
+def: "A feeding type and route combining fortified breast milk with delivery via a feeding tube." [FPO:curator]
+synonym: "tube fortified breastmilk" EXACT []
+synonym: "fortified breastmilk tube feeding" EXACT []
+is_a: FPO:0000014 ! Fortified breast milk
+is_a: FPO:0000006 ! feeding tube
+
+[Term]
+id: FPO:0000033
+name: birth mom's milk via feeding tube
+def: "A feeding type and route combining expressed breast milk with delivery via a feeding tube." [FPO:curator]
+synonym: "maternal milk tube feeding" EXACT []
+synonym: "expressed milk tube feeding" EXACT []
+is_a: FPO:0000011 ! expressed breast milk
+is_a: FPO:0000006 ! feeding tube
+
+[Term]
+id: FPO:0000034
+name: donor milk via feeding tube
+def: "A feeding type and route combining donor milk with delivery via a feeding tube." [FPO:curator]
+synonym: "donor milk tube feeding" EXACT []
+synonym: "donor tube feeding" EXACT []
+is_a: FPO:0000012 ! donor milk
+is_a: FPO:0000006 ! feeding tube
+
+[Term]
+id: FPO:0000035
+name: formula via bottle
+def: "A feeding type and route combining formula with delivery via a bottle." [FPO:curator]
+synonym: "bottle formula feeding" EXACT []
+synonym: "formula bottle feeding" EXACT []
+is_a: FPO:0000015 ! formula
+is_a: FPO:0000009 ! Bottlefeeding
+
+[Term]
+id: FPO:0000036
+name: fortified breast milk via bottle
+def: "A feeding type and route combining fortified breast milk with delivery via a bottle." [FPO:curator]
+synonym: "bottle fortified breastmilk" EXACT []
+synonym: "fortified breastmilk bottle feeding" EXACT []
+is_a: FPO:0000014 ! Fortified breast milk
+is_a: FPO:0000009 ! Bottlefeeding
+
+[Term]
+id: FPO:0000037
+name: birth mom's milk via bottle
+def: "A feeding type and route combining expressed breast milk with delivery via a bottle." [FPO:curator]
+synonym: "maternal milk bottle feeding" EXACT []
+synonym: "expressed milk bottle feeding" EXACT []
+is_a: FPO:0000011 ! expressed breast milk
+is_a: FPO:0000009 ! Bottlefeeding
+
+[Term]
+id: FPO:0000038
+name: donor milk via bottle
+def: "A feeding type and route combining donor milk with delivery via a bottle." [FPO:curator]
+synonym: "bottle donor milk feeding" EXACT []
+synonym: "donor milk bottle feeding" EXACT []
+is_a: FPO:0000012 ! donor milk
+is_a: FPO:0000009 ! Bottlefeeding

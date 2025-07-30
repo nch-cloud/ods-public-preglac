@@ -1,0 +1,38 @@
+FPO:0000001	feeding practice
+FPO:0000002	feeding route
+FPO:0000003	feeding type
+FPO:0000004	feeding Related
+FPO:0000005	NPO
+FPO:0000006	feeding tube
+FPO:0000007	PO
+FPO:0000040	direct breastfeeding
+FPO:0000009	Bottlefeeding
+FPO:0000010	human breast milk
+FPO:0000011	expressed breast milk
+FPO:0000012	donor milk
+FPO:0000013	Breast pumping
+FPO:0000014	Fortified breast milk
+FPO:0000015	formula
+FPO:0000016	Similac
+FPO:0000017	Enfamil
+FPO:0000018	Gerber
+FPO:0000019	Earth’s Best
+FPO:0000020	NeoSure
+FPO:0000021	EnfaCare
+FPO:0000022	EleCare
+FPO:0000023	isomil
+FPO:0000024	alimentum
+FPO:0000025	latching difficulties
+FPO:0000026	holding positions
+FPO:0000027	feeding difficulties
+FPO:0000028	lactation consultation
+FPO:0000029	feeding intolerance
+FPO:0000030	failure to thrive
+FPO:0000031	formula via feeding tube
+FPO:0000032	fortified breast milk via feeding tube
+FPO:0000033	birth mom's milk via feeding tube
+FPO:0000034	donor milk via feeding tube
+FPO:0000035	formula via bottle
+FPO:0000036	fortified breast milk via bottle
+FPO:0000037	birth mom's milk via bottle
+FPO:0000038	donor milk via bottle

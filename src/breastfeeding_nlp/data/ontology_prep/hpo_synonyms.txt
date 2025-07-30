@@ -1,0 +1,135 @@
+FPO:0000001	feeding practice
+FPO:0000002	feeding route
+FPO:0000003	feeding type
+FPO:0000004	feeding related
+FPO:0000005	npo
+FPO:0000006	nasogastric
+FPO:0000006	feeding tube
+FPO:0000006	bolus
+FPO:0000006	gavage
+FPO:0000006	g tube
+FPO:0000007	o p
+FPO:0000007	os per
+FPO:0000007	po
+FPO:0000040	chest feedings
+FPO:0000040	breast formula
+FPO:0000040	chestfeedings
+FPO:0000040	chestfed
+FPO:0000040	breast feeds
+FPO:0000040	breastfed
+FPO:0000040	chestfeeding
+FPO:0000040	breastfeeding direct
+FPO:0000040	breast fed
+FPO:0000040	chest fed
+FPO:0000040	at breast feeding
+FPO:0000040	chest feeding
+FPO:0000040	breastfeedings
+FPO:0000040	breastfeeding
+FPO:0000040	breast feeding
+FPO:0000040	breast feedings
+FPO:0000040	at breast feedings
+FPO:0000040	bf
+FPO:0000040	bottle breast
+FPO:0000040	breast feed
+FPO:0000009	bottlefed
+FPO:0000009	bottle feedings
+FPO:0000009	bottle fed
+FPO:0000009	bottlefeeding
+FPO:0000009	bottle
+FPO:0000009	bottle feeding
+FPO:0000010	breast milk
+FPO:0000010	breastmilk human
+FPO:0000010	breast human milk
+FPO:0000010	human milk
+FPO:0000010	breastmilk
+FPO:0000011	breastmilk expressed
+FPO:0000011	breast milk
+FPO:0000011	ebm
+FPO:0000011	breast expressed milk
+FPO:0000011	breast expressions milk
+FPO:0000011	expression hand
+FPO:0000011	breastmilk expressions
+FPO:0000011	expressions milk
+FPO:0000011	breastmilk
+FPO:0000011	breastmilk expression
+FPO:0000011	breast expression milk
+FPO:0000012	bank milk
+FPO:0000012	donor milk
+FPO:0000012	donor
+FPO:0000012	milk sharing
+FPO:0000012	banking milk
+FPO:0000013	breast collection milk
+FPO:0000013	pumping
+FPO:0000013	pumps
+FPO:0000013	breast pumping
+FPO:0000013	breastmilk collection
+FPO:0000013	dumped pumped
+FPO:0000013	pumped
+FPO:0000013	dump pump
+FPO:0000013	breast pump
+FPO:0000014	bm fortified
+FPO:0000014	fortified with
+FPO:0000014	fortifier human milk
+FPO:0000014	breast fortified milk
+FPO:0000014	breastmilk fortified
+FPO:0000014	fortified human milk
+FPO:0000014	hmf
+FPO:0000015	feeding formula
+FPO:0000015	formula
+FPO:0000015	baby formulas
+FPO:0000015	baby formula
+FPO:0000015	formulas infant
+FPO:0000015	formula infant
+FPO:0000016	sim
+FPO:0000016	sensitive similac
+FPO:0000016	advance sim
+FPO:0000016	advance similac
+FPO:0000016	sensitive sim
+FPO:0000016	similac
+FPO:0000017	enfamil
+FPO:0000018	gerber
+FPO:0000019	best earth s
+FPO:0000020	neosure
+FPO:0000021	enfacare
+FPO:0000022	elecare
+FPO:0000022	elacare
+FPO:0000023	isomil
+FPO:0000024	alimentum
+FPO:0000024	allimentum
+FPO:0000025	lanolin
+FPO:0000025	difficulty latching
+FPO:0000025	nipples tender
+FPO:0000025	difficulties latching
+FPO:0000025	cracked nipples
+FPO:0000026	football hold
+FPO:0000026	football position
+FPO:0000026	holding positions
+FPO:0000027	difficulties feeding
+FPO:0000027	gain poor weight
+FPO:0000028	consultation lactation
+FPO:0000028	lactation
+FPO:0000028	nnbf
+FPO:0000028	consult lactation
+FPO:0000029	feeding intolerance
+FPO:0000030	failure thrive to
+FPO:0000031	feeding formula tube via
+FPO:0000031	feeding formula tube
+FPO:0000032	breastmilk fortified tube
+FPO:0000032	breastmilk feeding fortified tube
+FPO:0000032	breast feeding fortified milk tube via
+FPO:0000033	expressed feeding milk tube
+FPO:0000033	birth feeding milk mom s tube via
+FPO:0000033	feeding maternal milk tube
+FPO:0000034	donor feeding milk tube via
+FPO:0000034	donor feeding milk tube
+FPO:0000034	donor feeding tube
+FPO:0000035	bottle formula via
+FPO:0000035	bottle feeding formula
+FPO:0000036	bottle breastmilk feeding fortified
+FPO:0000036	bottle breast fortified milk via
+FPO:0000036	bottle breastmilk fortified
+FPO:0000037	bottle expressed feeding milk
+FPO:0000037	bottle feeding maternal milk
+FPO:0000037	birth bottle milk mom s via
+FPO:0000038	bottle donor feeding milk
+FPO:0000038	bottle donor milk via

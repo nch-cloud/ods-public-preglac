@@ -1,0 +1,316 @@
+{
+    "@context": "https://example.org/feeding-practices-ontology/context",
+    "@type": "Ontology",
+    "name": "FeedingPracticesOntology",
+    "description": "An ontology for classifying infant feeding practices in clinical text.",
+    "version": "1.0",
+    "categories": [
+      {
+        "categoryName": "Breastfeeding",
+        "definition": "Terms indicating that breast milk is the primary or exclusive source of nutrition, whether directly from the breast or via expressed milk.",
+        "subcategories": [
+          {
+            "subCategoryName": "Direct Breastfeeding & Related Terms",
+            "terms": [
+              {
+                "term": "Breastfeeding",
+                "category": "Breastfeeding",
+                "definition": "Feeding an infant directly from the breast.",
+                "synonyms": [
+                  "Breast Feedings",
+                  "Breast Fed",
+                  "Breastfed",
+                  "BF",
+                  "Nursing"
+                ],
+                "relevance": "High",
+                "example_usage": "Mother is breastfeeding the newborn every 2 hours."
+              },
+              {
+                "term": "Exclusive Breastfeeding",
+                "category": "Breastfeeding",
+                "definition": "Feeding an infant only breast milk, with no addition of formula or other supplements except for vitamins or medications.",
+                "synonyms": [
+                  "Breastfeeding, Exclusive",
+                  "Exclusive Breast Feeding",
+                  "Breast Feeding, Exclusive",
+                  "EBF"
+                ],
+                "relevance": "High",
+                "example_usage": "Infant is exclusively breastfed for the first 6 months."
+              },
+              {
+                "term": "Chestfeeding",
+                "category": "Breastfeeding",
+                "definition": "An inclusive term for feeding an infant from the chest; typically used by individuals who do not identify with the term 'breastfeeding.'",
+                "synonyms": [
+                  "Chestfeedings"
+                ],
+                "relevance": "High",
+                "example_usage": "He is chestfeeding his newborn to support bonding and nutrition."
+              },
+              {
+                "term": "Milk Sharing",
+                "category": "Breastfeeding",
+                "definition": "The practice of receiving breast milk from another lactating individual through informal sharing arrangements.",
+                "synonyms": [
+                  "Sharing, Milk"
+                ],
+                "relevance": "Medium",
+                "example_usage": "The mother opted for milk sharing with another lactating parent in her community."
+              }
+            ]
+          },
+          {
+            "subCategoryName": "Breast Milk & Expression Terms",
+            "terms": [
+              {
+                "term": "Breastmilk",
+                "category": "Breastfeeding",
+                "definition": "Milk produced by the human breast, regardless of delivery method (breast, bottle, tube, etc.).",
+                "synonyms": [
+                  "Breast Milk",
+                  "EBM",
+                  "Expressed Breastmilk"
+                ],
+                "relevance": "High",
+                "example_usage": "The mother brought expressed breastmilk in labeled bottles."
+              },
+              {
+                "term": "Breastmilk Expression",
+                "category": "Breastfeeding",
+                "definition": "The act of expressing breast milk using hand expression or a breast pump.",
+                "synonyms": [
+                  "Breast Milk Expressions",
+                  "Expression, Breast Milk",
+                  "Milk Expression, Breast"
+                ],
+                "relevance": "Medium",
+                "example_usage": "She performs breastmilk expression several times a day to store milk for later use."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "categoryName": "Formula Feeding",
+        "definition": "Terms indicating that infant formula is the primary or exclusive source of nutrition (or references to specific infant formula products).",
+        "subcategories": [
+          {
+            "subCategoryName": "Infant Formula & Brand Names",
+            "terms": [
+              {
+                "term": "Infant Formula",
+                "category": "Formula Feeding",
+                "definition": "Commercially prepared formula designed to feed infants as an alternative or supplement to breast milk.",
+                "synonyms": [
+                  "Formula, Infant",
+                  "Formulas, Infant",
+                  "Baby Formula",
+                  "Baby Formulas",
+                  "Formula, Baby",
+                  "Formulas, Baby"
+                ],
+                "relevance": "High",
+                "example_usage": "Patient is on infant formula for supplemental feedings."
+              },
+              {
+                "term": "Similac",
+                "category": "Formula Feeding",
+                "definition": "A popular brand of infant formula.",
+                "synonyms": [
+                  "sim advance" 
+                ],
+                "relevance": "High",
+                "example_usage": "Similac was used exclusively during the first week."
+              },
+              {
+                "term": "Enfamil",
+                "category": "Formula Feeding",
+                "definition": "A well-known brand of infant formula available in various formulations.",
+                "relevance": "High",
+                "example_usage": "Switched from Enfamil to a specialized formula due to intolerance."
+              },
+              {
+                "term": "Gerber",
+                "category": "Formula Feeding",
+                "definition": "A brand offering infant formula and other baby food products.",
+                "relevance": "Medium",
+                "example_usage": "Gerber formula was introduced at two months."
+              },
+              {
+                "term": "Earth's Best",
+                "category": "Formula Feeding",
+                "definition": "An organic infant formula brand.",
+                "relevance": "Medium",
+                "example_usage": "Mother prefers Earth’s Best formula for organic certification."
+              },
+              {
+                "term": "NeoSure",
+                "category": "Formula Feeding",
+                "definition": "A specialized infant formula designed to meet the nutritional needs of premature or low-birth-weight infants.",
+                "relevance": "High",
+                "example_usage": "NeoSure recommended for infant born preterm."
+              },
+              {
+                "term": "EnfaCare",
+                "category": "Formula Feeding",
+                "definition": "A specialized formula by Enfamil for premature infants.",
+                "relevance": "High",
+                "example_usage": "The NICU provided EnfaCare due to prematurity."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "categoryName": "Ambiguous",
+        "definition": "Terms that could indicate feeding, collection, or pumping without clearly specifying whether it is breast milk or formula; or partially relevant to both contexts.",
+        "subcategories": [
+          {
+            "subCategoryName": "Ambiguous Feeding Terms",
+            "terms": [
+              {
+                "term": "Bottlefeeding",
+                "category": "Ambiguous",
+                "definition": "Feeding an infant with a bottle, which could contain either formula or expressed breast milk.",
+                "synonyms": [
+                  "Bottlefed"
+                ],
+                "relevance": "Medium",
+                "example_usage": "Baby was bottlefed overnight due to maternal rest needs."
+              },
+              {
+                "term": "Breast Milk Collection",
+                "category": "Ambiguous",
+                "definition": "Collection of milk that may be used for feeding, sharing, or storage; the context may not specify if actual breastfeeding occurs.",
+                "synonyms": [
+                  "Breastmilk Collection",
+                  "Milk Collection, Breast"
+                ],
+                "relevance": "Medium",
+                "example_usage": "She has breast milk collection bags in the refrigerator."
+              },
+              {
+                "term": "Breast Pumping",
+                "category": "Ambiguous",
+                "definition": "Using a pump to extract milk from breasts; does not always clarify whether the milk will be fed or discarded.",
+                "synonyms": [
+                  "Pumpings",
+                  "Pumping"
+                ],
+                "relevance": "Medium",
+                "example_usage": "The mother performed breast pumping but also supplemented with formula."
+              },
+              {
+                "term": "human milk fortifier?",
+                "category": "Ambiguous",
+                "definition": "A fortifying additive often used with breast milk for premature infants; ambiguous because it can introduce formula-like components into breast milk.",
+                "relevance": "Medium",
+                "example_usage": "Human milk fortifier was added to expressed breast milk for additional calories."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "categoryName": "Feeding-Related (Non-Specific)",
+        "definition": "Terms related to feeding difficulties, techniques, or anatomical issues without specifying breast vs. formula feeding.",
+        "subcategories": [
+          {
+            "subCategoryName": "General Feeding-Related",
+            "terms": [
+              {
+                "term": "Tender Nipples",
+                "category": "Feeding-Related",
+                "definition": "Discomfort or pain in nipples, common during or after feeding sessions.",
+                "relevance": "Low",
+                "example_usage": "Patient reports tender nipples after feeding attempts."
+              },
+              {
+                "term": "Cracked Nipples",
+                "category": "Feeding-Related",
+                "definition": "Physical cracking or fissures in the nipple area, often associated with breastfeeding but not exclusively.",
+                "relevance": "Low",
+                "example_usage": "Cracked nipples noted on exam, recommended topical treatment."
+              },
+              {
+                "term": "Lanolin",
+                "category": "Feeding-Related",
+                "definition": "A cream commonly used to treat or prevent nipple soreness or cracking, particularly in breastfeeding individuals.",
+                "relevance": "Low",
+                "example_usage": "Applying lanolin between feedings to soothe nipple pain."
+              },
+              {
+                "term": "Hand Expression",
+                "category": "Feeding-Related",
+                "definition": "Manual technique for expressing breast milk, but not explicitly indicating exclusive breastmilk usage.",
+                "relevance": "Low",
+                "example_usage": "Hand expression taught in postpartum class."
+              },
+              {
+                "term": "Football Position",
+                "category": "Feeding-Related",
+                "definition": "A specific hold used in breastfeeding, but the term alone may not confirm actual feeding type.",
+                "synonyms": [
+                  "Football Hold"
+                ],
+                "relevance": "Low",
+                "example_usage": "Mother instructed on using the football hold to improve latch."
+              },
+              {
+                "term": "Feeding Difficulties",
+                "category": "Feeding-Related",
+                "definition": "General issues with feeding, which could involve either breast or formula feeding.",
+                "relevance": "Low",
+                "example_usage": "Infant exhibits feeding difficulties due to cleft palate."
+              },
+              {
+                "term": "Poor Weight Gain",
+                "category": "Feeding-Related",
+                "definition": "Insufficient growth in an infant, potentially linked to suboptimal intake of breast milk or formula.",
+                "relevance": "Low",
+                "example_usage": "Poor weight gain prompts evaluation of feeding method."
+              },
+              {
+                "term": "NG Tube",
+                "category": "Feeding-Related",
+                "definition": "Nasogastric tube used for enteral feeding; can be used for either breast milk or formula.",
+                "synonyms": [
+                  "Nasogastric"
+                ],
+                "relevance": "Low",
+                "example_usage": "NG tube inserted for supplementary feeding."
+              },
+              {
+                "term": "Gavage",
+                "category": "Feeding-Related",
+                "definition": "Method of feeding using a tube directly into the stomach; used for both breast milk or formula.",
+                "synonyms": [
+                  "PO/Gavage",
+                  "Per os"
+                ],
+                "relevance": "Low",
+                "example_usage": "Gavage feeding established post-surgery."
+              },
+              {
+                "term": "Latch Difficulties",
+                "category": "Feeding-Related",
+                "definition": "Challenges with an infant latching onto the breast; however, does not definitively indicate exclusive breastfeeding.",
+                "relevance": "Low",
+                "example_usage": "Mother reports latch difficulties resulting in partial formula supplementation."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "classificationRules": {
+      "ExclusiveBreastfeeding": "If clinical text contains one or more 'Breastfeeding' terms (or synonyms) and no 'Formula Feeding' terms, label as Exclusive Breastfeeding.",
+      "ExclusiveFormulaFeeding": "If clinical text contains one or more 'Formula Feeding' terms (or synonyms) and no 'Breastfeeding' terms, label as Exclusive Formula Feeding.",
+      "MixedFeeding": "If clinical text contains at least one 'Breastfeeding' term and at least one 'Formula Feeding' term, label as Mixed Feeding.",
+      "None": "If clinical text does not contain terms from either 'Breastfeeding' or 'Formula Feeding' categories, label as None.",
+      "AmbiguousHandling": "If only 'Ambiguous' terms appear, further context is recommended. By default, if no clear Breastfeeding or Formula Feeding terms appear, label as None.",
+      "ExplanationNote": "Terms in 'Feeding-Related' category alone do not determine classification unless accompanied by 'Breastfeeding' or 'Formula Feeding' terms. They serve as contextual or supportive evidence."
+    }
+  }
