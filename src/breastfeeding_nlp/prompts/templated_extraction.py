@@ -1,0 +1,1 @@
+patient_info = """Extract patient identification information and the reason for evaluation. Specifically, extract the age and sex of the patient (e.g., "10-year-old boy") and the reason for evaluation (e.g., "Referred for developmental delay," "Evaluation of recurrent infections," etc.)"""
