@@ -1,0 +1,95 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "breastfeeding_nlp"
+version = "0.1.0"
+description = "Rule-based NLP pipeline for extracting breastfeeding phenotypes from EMRs"
+authors = [
+    {name = "ods-preglac team"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "medspacy>=1.3.1",
+    "spacy>=3.7.5",
+    "smart-open[s3]>=7.1.0",
+    "sentence-transformers>=3.4.0",
+    "span-marker>=1.7.0",
+    "torch>=2.5.1",
+    "transformers>=4.48.1",
+    "xlsxwriter>=3.2.1",
+    "numpy<2.0.0",
+    "joblib>=1.4.2",
+    "pip>=25.0",
+    "python-dotenv>=1.0.1",
+    "et-xmlfile==2.0.0",
+    "openpyxl==3.1.5",
+    "fastapi>=0.110.0",
+    "gradio>=4.32.0",
+    "uvicorn>=0.29.0",
+    "pandas>=2.2.0",
+    "scikit-learn>=1.4.0",
+    "xgboost>=2.0.3",
+    "pydantic>=2.7.0",
+    "chardet==5.2.0",
+    "mermaid-magic==0.1.4",
+    "tabulate==0.9.0",
+]
+
+[dependency-groups]
+
+scispacy = [
+    "scispacy>=0.5.5",
+    "en_core_sci_md @ https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_core_sci_md-0.5.4.tar.gz",
+    "en_ner_bc5cdr_md @ https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_ner_bc5cdr_md-0.5.4.tar.gz",
+    "en_ner_bionlp13cg_md @ https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.5.4/en_ner_bionlp13cg_md-0.5.4.tar.gz"
+]
+
+dev = [
+    "ipdb>=0.13.13",
+    "ipykernel>=6.29.5",
+    "ipywidgets>=8.1.5",
+    "jupyterlab>=4.3.4",
+    "jupytext>=1.16.6",
+    "plotly>=5.24.1",
+    "pre-commit>=4.1.0",
+    "seaborn>=0.13.2",
+    "patsy==1.0.1",
+    "statsmodels==0.14.4",
+    "scikit-posthocs==0.11.2",
+    "panel>=1.6.1",
+    "lxml>=5.3.1",
+    "pyspellchecker==0.8.2",
+    "upsetplot==0.9.0",
+    "lifelines==0.30.0",
+]
+
+negspacy = [
+    "negspacy @ git+https://github.com/jenojp/negspacy.git@develop",
+]
+
+abbreviation = [
+    "tiktoken==0.9.0",
+    "levenshtein==0.27.1",
+    "python-levenshtein==0.27.1",
+    "rapidfuzz==3.12.2",
+]
+
+setfit = [
+    "setfit[absa]>=1.1.1",
+    # Add spacy models via URLs
+    # "en-core-web-lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.7.1/en_core_web_lg-3.7.1-py3-none-any.whl",
+    # "en-core-web-md @ https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.7.1/en_core_web_md-3.7.1-py3-none-any.whl",
+    "en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl"
+]
+
+ontology = [
+    "obonet==1.1.1",
+]
